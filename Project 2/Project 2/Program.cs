@@ -15,23 +15,22 @@ namespace Project_2
             double s = 0;
             int a1;
             int a2;
+            int n = 0;
+            bool c;
+            bool b;
             do {
                 Console.WriteLine("Input first num:");
-                int.TryParse(Console.ReadLine(), out a1);
+              b=int.TryParse(Console.ReadLine(), out a1);
                 Console.WriteLine("Input second num:");
-                int.TryParse(Console.ReadLine(), out a2);
-                if (a2 > a1)
-                {
+              c=int.TryParse(Console.ReadLine(), out a2);
+            } while ((a1 < 0|| a2<a1)||!(c & b));
+
                     for (i = a1; i < a2; i++)
                     {
                         s += (Math.Pow(i, 2) - 1) / ((Math.Pow(-1, i + 1) * Math.Pow(i, 2) + 7));
                     }
                     Console.WriteLine("S={0}", s);
-                }
-                else
-                    Console.WriteLine("Error!");
-            } while (a2 < a1);
-                    
+            
             Console.ReadKey();
         }
     }
