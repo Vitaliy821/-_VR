@@ -17,7 +17,7 @@ namespace lab5
             Console.WriteLine("Input m:");
             int.TryParse(Console.ReadLine(), out m);
             int[,] a = new int[n, m];
-            var rand = new Random();
+            // var rand = new Random();
             for (i = 0; i < n; i++)
             {
                 for (j = 0; j < m; j++)
@@ -108,7 +108,7 @@ namespace lab5
                 }
                 else
                 {
-                    Console.WriteLine("Row {0}: 0", bi + 1);
+                    Console.WriteLine("Column {0}: 0", bi + 1);
                 }
 
                 i = 0;
@@ -125,7 +125,7 @@ namespace lab5
                 }
                 else
                 {
-                    Console.WriteLine("Row {0}: 0", bi + 1);
+                    Console.WriteLine("Column {0}: 0", bi + 1);
                 }
 
             }
