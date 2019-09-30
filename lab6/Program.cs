@@ -10,8 +10,7 @@ namespace lab6
     {
         static void Main(string[] args)
         {
-           
-            int i = 0;
+       
             int n = 0;
             int a = 0;
             int k = 0;
@@ -31,24 +30,18 @@ namespace lab6
 
                 }
             } while (a != 0);
+            
 
-            int[] ln = new int[n];
-
-            for (i = 0; i < n; i++)
+            for (int i = 0; i < list.Count; i++)
             {
-                ln[i] = (list[i].Length);
-                Console.WriteLine(ln[i]);
-               
-            }
-
-            for (i = 1; i < n; i++)
-            {
-
-                if (ln[i] == ln[i - 1])
+                for (int j = i+1; j < list.Count; j++)
                 {
-                    k++;
+                    if (list[i].Length == list[j].Length)
+                    {
+                        k++;
+                        list.RemoveAt(j);
+                    }
                 }
-
             }
 
 
