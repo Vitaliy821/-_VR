@@ -15,12 +15,12 @@ namespace curves
         public Form1()
         {
             InitializeComponent();
-            int offset = 1;
+            int k = 1;
             for (int j = 0; j < chart1.Series.Count; j++)
             {
                 for (double i = 1; i <= 40; i += 0.1)
-                    chart1.Series[j].Points.AddXY(i, Math.Sin(i * (j + 1)) + offset);
-                offset += 5;
+                    chart1.Series[j].Points.AddXY(i, Math.Sin(i * (j + 1)) + k);
+                k += 5;
             }
 
 
